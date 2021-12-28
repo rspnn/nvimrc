@@ -12,3 +12,6 @@ map('n', '<C-l>', '<c-w>l', opts)
 
 -- nvim-tree plugins
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+
+map('n', '<leader>a', ':lua require("harpoon.mark").add_file()<CR>', opts)
+map('n', '<leader>l', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)

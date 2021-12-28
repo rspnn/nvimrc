@@ -1,7 +1,7 @@
 -- neovim basic configuration
 require('settings')
 
--- Keymappings
+-- Key mappings
 require('keymaps')
 
 -- Plugins config
