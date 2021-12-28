@@ -7,3 +7,4 @@ require('keymaps')
 -- Plugins config
 require('plugins.packer')
 require('plugins.onedarkpro')
+require('plugins.nvim-tree')
