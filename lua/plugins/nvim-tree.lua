@@ -1,6 +1,6 @@
 require'nvim-tree'.setup {
-    auto_close = false,
+    auto_close = true,
     diagnostics = {
-        enable = false,
+        enable = true,
     },
 }

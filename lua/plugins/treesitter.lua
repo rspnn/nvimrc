@@ -30,4 +30,12 @@ require'nvim-treesitter.configs'.setup {
     rainbow = {
         enable = true,
     },
+    -- windwp/nvim-ts-autotag
+    autotag = {
+        enable = true,
+    },
+    -- windwp/nvim-autopairs
+    autopairs = {
+        enable = true,
+    }
 }
