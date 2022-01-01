@@ -80,3 +80,8 @@ require('lspconfig')['html'].setup {
         }
     }
 }
+
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+  cmd = { "vscode-json-language-server", "--stdio" }
+}

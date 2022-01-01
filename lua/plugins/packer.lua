@@ -50,4 +50,12 @@ return require('packer').startup(function()
         },
         -- tag = 'release' -- To use the latest release
     }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
+    use 'norcalli/nvim-colorizer.lua'
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 end)
