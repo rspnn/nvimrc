@@ -1,40 +1,56 @@
-local set = vim.opt
+vim.cmd('filetype plugin indent on')
+vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.hidden = true
+vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.pumheight = 20
+vim.o.fileencoding = 'utf-8'
+vim.o.cmdheight = 2
+vim.o.termguicolors = true
+vim.opt.termguicolors = true
+vim.o.splitright = true
+vim.o.splitbelow = true
+vim.o.conceallevel = 0
+vim.o.showtabline = 2
+vim.o.showmode = false
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.updatetime = 300
+vim.o.timeoutlen = 100
+vim.o.clipboard = "unnamedplus"
+vim.o.hlsearch = false
+vim.o.ignorecase = true
+vim.o.scrolloff = 3
+vim.o.sidescrolloff = 3
+vim.o.mouse = 'a'
+vim.o.undodir = vim.fn.stdpath("data") .. "/undo"
+vim.o.undofile = true
+vim.o.swapfile = false
 
---
-set.encoding = "utf-8"
-set.mouse = "a"
-set.termguicolors = true
-set.hidden = true
+vim.wo.wrap = false
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.wo.cursorline = true
+vim.wo.signcolumn = 'yes'
 
--- direct connection to the system clipboard
-set.clipboard = "unnamedplus"
+vim.o.tabstop = 4
+vim.bo.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.bo.shiftwidth = 4
+vim.o.autoindent = true
+vim.bo.autoindent = true
 
--- number settings
-set.number = true
-set.relativenumber = true
-
--- search settings 
-set.hlsearch = true
-set.ignorecase = true
-set.incsearch = true
-set.smartcase = true -- search uppercase word, be case sensitive
-
--- files settings
-set.backup = true
-set.backupdir = vim.fn.stdpath("data") .. "/backup"
-set.writebackup = true
-set.undodir = vim.fn.stdpath("data") .. "/undo"
-set.undofile = true
-set.swapfile = false
-
--- cursor settings
-set.cursorcolumn = false
-set.cursorline = true
-set.scrolloff = 5 -- cursor off in 5th line
-
--- Inddent Settings
-set.expandtab = true
-set.smartcase = true
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
+vim.g.loaded_muchparen = 1
+vim.g.loaded_matchit = 1
+vim.g.loaded_logiPat = 1
+vim.g.loaded_rrhelper = 1
+vim.g.loaded_tarPlugin = 1
+vim.g.loaded_gzip = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.loaded_2html_plugin = 1
+vim.g.loaded_shada_plugin = 1
+vim.g.loaded_spelfile_plugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_tutor_mode_plugin = 1
+vim.g.loaded_remote_plugins = 1

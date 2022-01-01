@@ -1,4 +1,5 @@
 local custom_onedark = require'lualine.themes.onedark'
+
 custom_onedark.normal.a.bg = '#2c323d'
 custom_onedark.normal.a.fg = '#e06c75'
 
@@ -19,5 +20,6 @@ require'lualine'.setup{
         theme = custom_onedark,
         section_separators = '',
         component_separators = ''
-    }
+    },
+	extensions = {'nvim-tree'}
 }

@@ -1,5 +1,4 @@
 require'nvim-treesitter.configs'.setup {
-    -- One of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = {
         "bash",
         "lua",
@@ -8,34 +7,30 @@ require'nvim-treesitter.configs'.setup {
         "json",
         "css"
     },
-
-    -- Install languages synchronously (only applied to `ensure_installed`)
     sync_install = false,
-
     highlight = {
-        -- `false` will disable the whole extension
         enable = true,
-
-        -- list of language that will be disabled
-        -- disable = { "c", "rust" },
-
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-    
+	indent = {
+		enable = true,
+		disable = { "python" },
+	},
     -- p00f/nvim-ts-rainbow
     rainbow = {
-        enable = true,
+         enable = true,
+		 colors = {
+			 "#9A77CF",
+			 "#118DC3",
+			 "#56B6C2",
+			 "#1DA912",
+			 "#EEA825",
+			 "#EE9025",
+			 "#E05661",
+		 }
     },
     -- windwp/nvim-ts-autotag
     autotag = {
-        enable = true,
-    },
-    -- windwp/nvim-autopairs
-    autopairs = {
         enable = true,
     }
 }
