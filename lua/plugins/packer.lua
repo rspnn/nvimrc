@@ -27,8 +27,9 @@ return require('packer').startup(function()
 	use {'norcalli/nvim-colorizer.lua', config = 'require("colorizer").setup()'}
 	use {'lewis6991/gitsigns.nvim', config = 'require("gitsigns").setup{}'}
 	use {'lukas-reineke/indent-blankline.nvim', config = 'require("plugins.blankline")'}
-	use {'lukas-reineke/format.nvim', config = 'require("plugins.format")'}
+	use {'jose-elias-alvarez/null-ls.nvim', config = 'require("plugins.null-ls")'}
 	use {'terrortylor/nvim-comment', config = 'require("nvim_comment").setup()'}
+	use {'JoosepAlviste/nvim-ts-context-commentstring'}
 
 	if packer_bootstrap then
 		require('packer').sync()
