@@ -1,0 +1,62 @@
+local M = {}
+
+function _G.show_documentation()
+    if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+        vim.cmd("h " .. vim.fn.expand("<cword>"))
+    else
+        vim.cmd("lua vim.lsp.buf.hover()")
+    end
+end
+
+function M.custom_capabilities()
+    local cmp_lsp = require("cmp_nvim_lsp")
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = cmp_lsp.update_capabilities(capabilities)
+    return capabilities
+end
+
+function M.custom_on_init()
+    print("Language Server Protocol started!")
+end
+
+function M.custom_cwd()
+    if vim.loop.cwd() == vim.loop.os_homedir() then
+        return vim.fn.expand("%:p:h")
+    end
+    return vim.loop.cwd()
+end
+
+function M.custom_on_attach(client, bufnr)
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" })
+
+    local keymap = function(mode, key, result)
+        vim.api.nvim_buf_set_keymap(bufnr, mode, key, result, { noremap = true, silent = true })
+    end
+
+    keymap("n", "K", "<CMD>lua show_documentation()<CR>")
+    keymap("n", "gd", '<CMD>lua require("telescope.builtin").lsp_definitions()<CR>')
+    keymap("n", "[e", "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>")
+    keymap("n", "]e", "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>")
+    keymap("n", "gr", "<CMD>lua vim.lsp.buf.rename()<CR>")
+    keymap("n", "<TAB>", "<CMD>lua vim.diagnostic.open_float()<CR>")
+end
+
+function M.default(configs)
+    local custom_config = {
+        root_dir = M.custom_cwd,
+        on_init = M.custom_on_init,
+        on_attach = M.custom_on_attach,
+        capabilities = M.custom_capabilities(),
+    }
+    if configs ~= nil then
+        for key, value in pairs(configs) do
+            custom_config[key] = value
+        end
+    end
+    return custom_config
+end
+
+return M

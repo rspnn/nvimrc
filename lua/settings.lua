@@ -1,56 +1,70 @@
-vim.cmd('filetype plugin indent on')
-vim.o.shortmess = vim.o.shortmess .. 'c'
-vim.o.hidden = true
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
-vim.o.pumheight = 20
-vim.go.cmdheight = 1
-vim.o.fileencoding = 'utf-8'
-vim.o.termguicolors = true
+-- Ui
+vim.opt.encoding = "utf-8"
+vim.opt.errorbells = false
+vim.opt.fileencoding = "utf-8"
+vim.opt.fileencodings = "utf-8"
+vim.opt.hidden = true
+vim.opt.mouse = "a"
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 5
+vim.opt.showmode = false
+vim.opt.showtabline = 2
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.o.splitright = true
-vim.o.splitbelow = true
-vim.o.conceallevel = 0
-vim.o.showtabline = 2
-vim.o.showmode = false
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.updatetime = 300
-vim.o.timeoutlen = 100
-vim.o.clipboard = "unnamedplus"
-vim.o.hlsearch = false
-vim.o.ignorecase = true
-vim.o.scrolloff = 3
-vim.o.sidescrolloff = 3
-vim.o.mouse = 'a'
-vim.o.undodir = vim.fn.stdpath("data") .. "/undo"
-vim.o.undofile = true
-vim.o.swapfile = false
+vim.opt.title = true
+vim.opt.number = true
+vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.background = "dark"
+vim.wo.colorcolumn = '80'
 
-vim.wo.wrap = false
-vim.wo.number = true
-vim.wo.relativenumber = true
-vim.wo.cursorline = true
-vim.wo.signcolumn = 'yes'
+-- restore cursor position
+vim.cmd([[
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g`\"" |
+    \ endif
+]])
+-- Search
+vim.opt.ignorecase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 
-vim.o.tabstop = 4
-vim.bo.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.bo.shiftwidth = 4
-vim.o.autoindent = true
-vim.bo.autoindent = true
+-- Indent
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
-vim.g.loaded_muchparen = 1
+vim.opt.clipboard = "unnamedplus"
+vim.opt.autoindent = true
+vim.opt.expandtab = true
+
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
+vim.opt.undofile = true
+vim.opt.updatetime = 300
+vim.opt.visualbell = false
+vim.opt.writebackup = false
+
+-- disable distribution plugins
+vim.g.loaded_gzip = 1
+vim.g.loaded_tar = 1
+vim.g.loaded_tarPlugin = 1
+vim.g.loaded_zip = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.loaded_getscript = 1
+vim.g.loaded_getscriptPlugin = 1
+vim.g.loaded_vimball = 1
+vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_2html_plugin = 1
 vim.g.loaded_logiPat = 1
 vim.g.loaded_rrhelper = 1
-vim.g.loaded_tarPlugin = 1
-vim.g.loaded_gzip = 1
-vim.g.loaded_zipPlugin = 1
-vim.g.loaded_2html_plugin = 1
-vim.g.loaded_shada_plugin = 1
-vim.g.loaded_spelfile_plugin = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_tutor_mode_plugin = 1
-vim.g.loaded_remote_plugins = 1
+vim.g.loaded_netrwSettings = 1
+vim.g.loaded_netrwfilehandlers = 1
+

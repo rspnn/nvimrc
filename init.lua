@@ -1,4 +1,4 @@
--- neovim basic configuration
 require('settings')
+require('plugins.plugins')
+require('plugins.onedarkpro')
 require('keymaps')
-require('plugins.packer')
