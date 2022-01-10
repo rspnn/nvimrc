@@ -22,10 +22,20 @@ vim.wo.colorcolumn = '80'
 -- restore cursor position
 vim.cmd([[
 autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   execute "normal! g`\"" |
-    \ endif
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   execute "normal! g`\"" |
+  \ endif
 ]])
+
+-- 2 spaces for selected filetypes
+vim.cmd [[
+  autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
+]]
+
+-- don't auto commenting new lines
+vim.cmd [[
+  au BufEnter * set fo-=c fo-=r fo-=o
+]]
 -- Search
 vim.opt.ignorecase = true
 vim.opt.hlsearch = true
