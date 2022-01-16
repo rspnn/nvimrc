@@ -34,7 +34,7 @@ return packer.startup(function(use)
 	use 'wbthomason/packer.nvim'
     use 'nvim-lua/popup.nvim'
     -- Ui
-   	use {'olimorris/onedarkpro.nvim', config = 'require("plugins.onedarkpro")'}
+   	use {'olimorris/onedarkpro.nvim'}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = 'require("plugins.treesitter")'}
 	use {'p00f/nvim-ts-rainbow'}
 	use {'windwp/nvim-autopairs', config = 'require("plugins.autopairs")'}

@@ -36,6 +36,7 @@ vim.cmd [[
 vim.cmd [[
   au BufEnter * set fo-=c fo-=r fo-=o
 ]]
+
 -- Search
 vim.opt.ignorecase = true
 vim.opt.hlsearch = true
