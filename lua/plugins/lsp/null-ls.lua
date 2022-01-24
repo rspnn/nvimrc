@@ -17,7 +17,7 @@ null_ls.setup {
         "typescriptreact",
         "html",
       },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--arrow-parens", "avoid", "--trailing-comma", "none" },
     },
   },
 }

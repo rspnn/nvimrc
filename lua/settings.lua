@@ -37,6 +37,12 @@ vim.cmd [[
   au BufEnter * set fo-=c fo-=r fo-=o
 ]]
 
+-- Using live-server for HTML/CSS/JS
+-- (needs to be installed with npm i -g live-server)
+vim.cmd[[
+  command! -nargs=* LiveServer :split | resize 2 | terminal<CR> | live-server
+]]
+
 -- Search
 vim.opt.ignorecase = true
 vim.opt.hlsearch = true
