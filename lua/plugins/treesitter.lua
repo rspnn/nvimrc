@@ -10,7 +10,8 @@ configs.setup {
         "html",
         "javascript",
         "json",
-        "css"
+        "css",
+        "cpp"
     },
     sync_install = false,
     highlight = {
