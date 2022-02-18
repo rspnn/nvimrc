@@ -31,31 +31,32 @@ end
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use 'wbthomason/packer.nvim'
-    use 'nvim-lua/popup.nvim'
-    -- Ui
-   	use {'olimorris/onedarkpro.nvim'}
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = 'require("plugins.treesitter")'}
-	use {'p00f/nvim-ts-rainbow'}
-	use {'windwp/nvim-autopairs', config = 'require("plugins.autopairs")'}
-	use {'windwp/nvim-ts-autotag'}
-   	use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = 'require("plugins.telescope")'}
-   	use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, config = 'require("plugins.lualine")'}
-   	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', config = 'require("plugins.bufferline")'}
-	use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, config = 'require("plugins.nvim-tree")'}
-   	use {'ThePrimeagen/harpoon', requires = 'nvim-lua/plenary.nvim'}
-	use {'norcalli/nvim-colorizer.lua'}
-   	use {'lewis6991/gitsigns.nvim', config = 'require("plugins.gitsigns")'}
-	use {'terrortylor/nvim-comment', config = 'require("nvim_comment").setup()'}
-	use {'JoosepAlviste/nvim-ts-context-commentstring'}
-   	use {'neovim/nvim-lspconfig', config = 'require("plugins.lsp")'}
-   	use {'hrsh7th/nvim-cmp', config = 'require("plugins.lsp.cmp")'}
-	use {'hrsh7th/cmp-nvim-lsp'}
-	use {'hrsh7th/cmp-vsnip'}
-	use {'hrsh7th/vim-vsnip'}
-	use {'hrsh7th/cmp-buffer'}
-	use {'hrsh7th/cmp-path'}
-	use {'jose-elias-alvarez/null-ls.nvim', config = 'require("plugins.lsp.null-ls")'}
+  use 'wbthomason/packer.nvim'
+  use 'nvim-lua/popup.nvim'
+  -- Ui
+  use {'olimorris/onedarkpro.nvim'}
+  use 'shaunsingh/nord.nvim'
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = 'require("plugins.treesitter")'}
+  use {'p00f/nvim-ts-rainbow'}
+  use {'windwp/nvim-autopairs', config = 'require("plugins.autopairs")'}
+  use {'windwp/nvim-ts-autotag'}
+  use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim', config = 'require("plugins.telescope")'}
+  use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}, config = 'require("plugins.lualine")'}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', config = 'require("plugins.bufferline")'}
+  use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons'}, config = 'require("plugins.nvim-tree")'}
+  use {'ThePrimeagen/harpoon', requires = 'nvim-lua/plenary.nvim'}
+  use {'norcalli/nvim-colorizer.lua'}
+  use {'lewis6991/gitsigns.nvim', config = 'require("plugins.gitsigns")'}
+  use {'terrortylor/nvim-comment', config = 'require("nvim_comment").setup()'}
+  use {'JoosepAlviste/nvim-ts-context-commentstring'}
+  use {'neovim/nvim-lspconfig', config = 'require("plugins.lsp")'}
+  use {'hrsh7th/nvim-cmp', config = 'require("plugins.lsp.cmp")'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/vim-vsnip'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'jose-elias-alvarez/null-ls.nvim', config = 'require("plugins.lsp.null-ls")'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
