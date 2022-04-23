@@ -19,5 +19,6 @@ null_ls.setup {
       },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--arrow-parens", "avoid", "--trailing-comma", "none" },
     },
+    formatting.stylua,
   },
 }

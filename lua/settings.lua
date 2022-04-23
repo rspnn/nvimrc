@@ -17,7 +17,7 @@ vim.opt.title = true
 vim.opt.number = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.background = "dark"
-vim.wo.colorcolumn = '80'
+vim.wo.colorcolumn = '100'
 
 -- restore cursor position
 vim.cmd([[
