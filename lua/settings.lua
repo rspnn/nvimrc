@@ -17,7 +17,7 @@ vim.opt.title = true
 vim.opt.number = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.background = "dark"
-vim.wo.colorcolumn = '100'
+vim.wo.colorcolumn = "100"
 vim.opt.wrap = false
 
 -- restore cursor position
@@ -29,20 +29,14 @@ autocmd BufReadPost *
 ]])
 
 -- 2 spaces for selected filetypes
-vim.cmd [[
+vim.cmd([[
   autocmd FileType xml,html,xhtml,css,scss,javascript,lua,yaml setlocal shiftwidth=2 tabstop=2
-]]
+]])
 
 -- don't auto commenting new lines
-vim.cmd [[
+vim.cmd([[
   au BufEnter * set fo-=c fo-=r fo-=o
-]]
-
--- Using live-server for HTML/CSS/JS
--- (needs to be installed with npm i -g live-server)
-vim.cmd[[
-  command! -nargs=* LiveServer :split | resize 2 | terminal<CR> | live-server
-]]
+]])
 
 -- Search
 vim.opt.ignorecase = true
@@ -56,7 +50,6 @@ vim.opt.tabstop = 4
 vim.opt.clipboard = "unnamedplus"
 vim.opt.autoindent = true
 vim.opt.expandtab = true
-
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -85,4 +78,3 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwfilehandlers = 1
-

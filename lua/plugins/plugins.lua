@@ -55,9 +55,12 @@ return packer.startup(function(use)
 		config = 'require("plugins.nvim-tree")',
 	})
 	use({ "ThePrimeagen/harpoon", requires = "nvim-lua/plenary.nvim" })
-  use({ "norcalli/nvim-colorizer.lua", config = 'require("plugins.colorizer")' })
+	use({ "norcalli/nvim-colorizer.lua", config = 'require("plugins.colorizer")' })
 	use({ "lewis6991/gitsigns.nvim", config = 'require("plugins.gitsigns")' })
 	use({ "terrortylor/nvim-comment", config = 'require("nvim_comment").setup()' })
+	use({ "lukas-reineke/indent-blankline.nvim", config = 'require("plugins.blankline")' })
+
+	-- Lsp and auto complete
 	use({ "neovim/nvim-lspconfig", config = 'require("plugins.lsp")' })
 	use({ "hrsh7th/nvim-cmp", config = 'require("plugins.lsp.cmp")' })
 	use({ "hrsh7th/cmp-nvim-lsp" })
