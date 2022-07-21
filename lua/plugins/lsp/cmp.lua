@@ -68,10 +68,6 @@ cmp.setup({
             { name = "buffer" },
             { name = "vsnip" },
         },
-        documentation = {
-            border = "single",
-            winhighlight = "NormalFloat:CmpDocumentation,FloatBorder:CmpDocumentationBorder",
-        },
         completion = {
             autocomplete = { cmp.TriggerEvent.TextChanged },
         },

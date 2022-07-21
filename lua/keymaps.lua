@@ -10,7 +10,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 -- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -24,15 +23,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-keymap("n", "<leader>q", "<CMD>%bdelete|edit#|bdelete#<CR>", opts)
-keymap("n", "Q", "<CMD>bdelete<CR>", opts)
+keymap("n", "<leader>q", "<CMD>bdelete<CR>", opts)
 
-keymap('n', '<A-l>', '<CMD>BufferLineCycleNext<CR>', opts)
-keymap('n', '<A-h>', '<CMD>BufferLineCyclePrev<CR>', opts)
-keymap('n', '<A-L>', '<CMD>BufferLineMoveNext<CR>', opts)
-keymap('n', '<A-H>', '<CMD>BufferLineMovePrev<CR>', opts)
-
-keymap('n', '<esc><esc>', '<CMD>nohlsearch<CR>', opts)
+keymap("n", "<esc><esc>", "<CMD>nohlsearch<CR>", opts)
 
 keymap("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", opts)
 
@@ -41,8 +34,16 @@ keymap("n", "<leader>fb", "<CMD>Telescope buffers<CR>", opts)
 
 keymap("n", "<leader>a", "<CMD>lua require('harpoon.mark').add_file()<CR>", opts)
 keymap("n", "<leader>l", "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+keymap("n", "<A-1>", "<CMD>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+keymap("n", "<A-2>", "<CMD>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+keymap("n", "<A-3>", "<CMD>lua require('harpoon.ui').nav_file(3)<CR>", opts)
+keymap("n", "<A-4>", "<CMD>lua require('harpoon.ui').nav_file(4)<CR>", opts)
+keymap("n", "<A-5>", "<CMD>lua require('harpoon.ui').nav_file(5)<CR>", opts)
+keymap("n", "<A-6>", "<CMD>lua require('harpoon.ui').nav_file(6)<CR>", opts)
+
+keymap("n", "<A-l>", '<CMD>lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap("n", "<A-h>", '<CMD>lua require("harpoon.ui").nav_prev()<CR>', opts)
 
 keymap("n", "<leader>h", "<CMD>ColorizerToggle<CR>", opts)
 
 keymap("n", "<leader>f", "<CMD>lua vim.lsp.buf.formatting()<CR>", opts)
-

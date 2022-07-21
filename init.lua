@@ -1,4 +1,11 @@
-require('settings')
-require('plugins.plugins')
-require('plugins.onedarkpro')
-require('keymaps')
+-- Basic Neovim Configuration
+require("settings")
+
+-- Plugins
+require("plugins.plugins")
+
+-- Colorscheme
+require("plugins.onedarkpro")
+
+-- Keymaps
+require("keymaps")

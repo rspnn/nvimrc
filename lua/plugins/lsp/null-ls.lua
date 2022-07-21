@@ -9,16 +9,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = true,
   sources = {
-    formatting.prettier.with {
-      filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "html",
-      },
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--arrow-parens", "avoid", "--trailing-comma", "none" },
-    },
+    formatting.prettier,
     formatting.stylua,
   },
 }
