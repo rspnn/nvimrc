@@ -33,17 +33,15 @@ keymap("n", "<leader>ff", "<CMD>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fb", "<CMD>Telescope buffers<CR>", opts)
 
 keymap("n", "<leader>a", "<CMD>lua require('harpoon.mark').add_file()<CR>", opts)
-keymap("n", "<leader>l", "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-keymap("n", "<A-1>", "<CMD>lua require('harpoon.ui').nav_file(1)<CR>", opts)
-keymap("n", "<A-2>", "<CMD>lua require('harpoon.ui').nav_file(2)<CR>", opts)
-keymap("n", "<A-3>", "<CMD>lua require('harpoon.ui').nav_file(3)<CR>", opts)
-keymap("n", "<A-4>", "<CMD>lua require('harpoon.ui').nav_file(4)<CR>", opts)
-keymap("n", "<A-5>", "<CMD>lua require('harpoon.ui').nav_file(5)<CR>", opts)
-keymap("n", "<A-6>", "<CMD>lua require('harpoon.ui').nav_file(6)<CR>", opts)
+keymap("n", "<leader>;", "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+keymap("n", "<leader>h", "<CMD>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+keymap("n", "<leader>j", "<CMD>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+keymap("n", "<leader>k", "<CMD>lua require('harpoon.ui').nav_file(3)<CR>", opts)
+keymap("n", "<leader>l", "<CMD>lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 keymap("n", "<A-l>", '<CMD>lua require("harpoon.ui").nav_next()<CR>', opts)
 keymap("n", "<A-h>", '<CMD>lua require("harpoon.ui").nav_prev()<CR>', opts)
 
-keymap("n", "<leader>h", "<CMD>ColorizerToggle<CR>", opts)
+keymap("n", "<leader>c", "<CMD>ColorizerToggle<CR>", opts)
 
 keymap("n", "<leader>f", "<CMD>lua vim.lsp.buf.formatting()<CR>", opts)
