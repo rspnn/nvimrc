@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
 " NOTE: You can use other key to expand snippet.
 
 " Expand
@@ -27,4 +27,4 @@ let g:vsnip_filetypes = {}
 let g:vsnip_filetypes.javascriptreact = ['javascript']
 let g:vsnip_filetypes.typescriptreact = ['typescript']
 let g:vsnip_snippet_dir = expand('~/.config/nvim/snippets')
-]]
+]])
