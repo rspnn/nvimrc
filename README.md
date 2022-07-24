@@ -8,7 +8,7 @@
 * [typescript](https://github.com/microsoft/TypeScript)
 * [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
 * [prettier](https://github.com/prettier/prettier)
-
+* [beautysh](https://github.com/lovesegfault/beautysh)
 ### Arch Linux / Pacman Package Manager
 ```
 sudo pacman -S tree-sitter ripgrep fd stylua
@@ -17,4 +17,9 @@ sudo pacman -S tree-sitter ripgrep fd stylua
 ### NPM
 ```
 npm install -g typescript typescript-language-server prettier
+```
+
+### pip 
+```
+pip install beautysh
 ```
