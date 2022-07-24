@@ -15,12 +15,12 @@
 sudo pacman -S tree-sitter ripgrep fd stylua
 ```
 
-### NPM
+### NPM / package manager for Node.js
 ```
 npm install -g typescript typescript-language-server prettier
 ```
 
-### pip 
+### pip / package manager for python
 ```
 pip install beautysh
 ```
