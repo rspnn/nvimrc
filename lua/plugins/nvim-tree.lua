@@ -3,4 +3,13 @@ if not status_ok then
 	return
 end
 
-nvim_tree.setup({})
+nvim_tree.setup({
+	view = {
+		mappings = {
+			list = {
+				{ key = "<C-k>", action = "" },
+				{ key = "<C-i>", action = "toggle_file_info" },
+			},
+		},
+	},
+})

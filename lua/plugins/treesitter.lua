@@ -12,6 +12,7 @@ configs.setup({
 		"json",
 		"css",
 		"cpp",
+		"fish",
 	},
 	sync_install = false,
 	highlight = {
