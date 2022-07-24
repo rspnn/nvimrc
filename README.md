@@ -9,6 +9,7 @@
 * [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
 * [prettier](https://github.com/prettier/prettier)
 * [beautysh](https://github.com/lovesegfault/beautysh)
+
 ### Arch Linux / Pacman Package Manager
 ```
 sudo pacman -S tree-sitter ripgrep fd stylua
