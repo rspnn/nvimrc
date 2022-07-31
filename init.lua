@@ -5,6 +5,9 @@ end
 -- Basic Neovim Configuration
 require("options")
 
+-- Autocmds
+require("autocmds")
+
 -- Plugins
 require("plugins.plugins")
 
