@@ -12,4 +12,14 @@ nvim_tree.setup({
 			},
 		},
 	},
+	renderer = {
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+		},
+	},
+	trash = {
+		cmd = "trash-put",
+		require_confirm = true,
+	},
 })
