@@ -5,6 +5,9 @@ end
 
 onedarkpro.setup({
 	theme = "onedark",
+	hlgroups = { -- Overriding the Comment highlight group
+		NvimTreeFolderIcon = { fg = "#e06c75" },
+	},
 	styles = { -- Choose from "bold,italic,underline"
 		strings = "NONE", -- Style that is applied to strings.
 		comments = "italic", -- Style that is applied to comments

@@ -22,4 +22,5 @@ nvim_tree.setup({
 		cmd = "trash-put",
 		require_confirm = true,
 	},
+	filters = { custom = { "^.git$" } },
 })

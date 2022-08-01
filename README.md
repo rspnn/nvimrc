@@ -9,15 +9,16 @@
 * [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
 * [prettier](https://github.com/prettier/prettier)
 * [beautysh](https://github.com/lovesegfault/beautysh)
+* [lua-language-server](https://github.com/sumneko/)
 
 ### Arch Linux / Pacman Package Manager
 ```
-sudo pacman -S tree-sitter ripgrep fd stylua
+sudo pacman -S tree-sitter ripgrep fd stylua lua-language-server
 ```
 
 ### NPM / package manager for Node.js
 ```
-npm install -g typescript typescript-language-server prettier
+npm install -g typescript typescript-language-server prettier vscode-langservers-extracted
 ```
 
 ### pip / package manager for python

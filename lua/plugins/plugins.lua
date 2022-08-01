@@ -62,13 +62,14 @@ return packer.startup(function(use)
 
 	-- Lsp and auto complete
 	use({ "neovim/nvim-lspconfig", config = 'require("plugins.lsp")' })
-	use({ "hrsh7th/nvim-cmp", config = 'require("plugins.lsp.cmp")' })
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-vsnip" })
-	use({ "hrsh7th/vim-vsnip", config = 'require("plugins.lsp.vsnip")' })
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-path" })
-	use({ "jose-elias-alvarez/null-ls.nvim", config = 'require("plugins.lsp.null-ls")' })
+	use("hrsh7th/nvim-cmp") -- Autocompletion plugin
+	use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
+	use("hrsh7th/cmp-path") -- LSP source for nvim-cmp
+	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
+	use("L3MON4D3/LuaSnip") -- Snippets plugin
+	use("rafamadriz/friendly-snippets")
+	use("jose-elias-alvarez/null-ls.nvim") -- formatting
+	use({"ray-x/lsp_signature.nvim"})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -48,4 +48,4 @@ keymap("n", "<A-h>", '<CMD>lua require("harpoon.ui").nav_prev()<CR>', opts)
 
 keymap("n", "<leader>c", "<CMD>ColorizerToggle<CR>", opts)
 
-keymap("n", "<leader>f", "<CMD>lua vim.lsp.buf.formatting()<CR>", opts)
+keymap("n", "<leader>w", "<CMD>lua vim.lsp.buf.formatting()<CR>", opts)

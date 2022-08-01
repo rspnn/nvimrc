@@ -1,5 +1,5 @@
-if vim.fn.has('nvim-0.7.2') == 0 then
-  error('Need Neovim v0.7.2 in order to run this config!')
+if vim.fn.has("nvim-0.7.2") == 0 then
+	error("Need Neovim v0.7.2 in order to run this config!")
 end
 
 -- Basic Neovim Configuration
