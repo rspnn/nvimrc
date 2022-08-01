@@ -10,6 +10,7 @@
 * [prettier](https://github.com/prettier/prettier)
 * [beautysh](https://github.com/lovesegfault/beautysh)
 * [lua-language-server](https://github.com/sumneko/)
+* [vscode-langservers-extracted](https://github.com/hrsh7th/vscode-langservers-extracted)
 
 ### Arch Linux / Pacman Package Manager
 ```
