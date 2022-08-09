@@ -17,6 +17,19 @@ nvim_tree.setup({
 			enable = true,
 			inline_arrows = true,
 		},
+		icons = {
+			glyphs = {
+				git = {
+					unstaged = "",
+					staged = " ﱣ",
+					unmerged = " ",
+					renamed = "凜",
+					untracked = "ﭜ",
+					deleted = " ",
+					ignored = " ﭥ",
+				},
+			},
+		},
 	},
 	trash = {
 		cmd = "trash-put",
