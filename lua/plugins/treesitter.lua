@@ -13,6 +13,7 @@ configs.setup({
 		"css",
 		"cpp",
 		"fish",
+		"nix",
 	},
 	sync_install = false,
 	highlight = {

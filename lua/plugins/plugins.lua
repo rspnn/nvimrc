@@ -107,7 +107,7 @@ return packer.startup(function(use)
 	use({ "rafamadriz/friendly-snippets", commit = "8880d7257e6f25e177a8192ef35d4ba8874b004d" })
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "9b66c33191598d56c705e87016d48d46f57f98fb" }) -- formatting
 	use({ "ray-x/lsp_signature.nvim", commit = "4665921ff8e30601c7c1328625b3abc1427a6143" })
-
+  use({"aca/emmet-ls"})
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
