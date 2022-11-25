@@ -24,4 +24,5 @@ npm install -g typescript typescript-language-server prettier vscode-langservers
 ### pip / package manager for python
 ```
 pip install beautysh
-```
+`
+tambahin dong bg tutor
